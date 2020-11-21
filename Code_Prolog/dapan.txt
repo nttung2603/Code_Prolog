@@ -1,0 +1,1 @@
+Moi quan he vo chong?-X?Y?parent(princess_diana,prince_william)&married(prince_charles,princess_diana)

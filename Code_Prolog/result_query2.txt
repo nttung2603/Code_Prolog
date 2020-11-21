@@ -1,6 +1,6 @@
-prince_philip la chong cua Queen Elizabeth II dung khong ?
-False
-prince_philip la chong cua Queen Elizabeth II dung khong ?
+1.prince_philip la chong cua Queen Elizabeth II dung khong 
 True
-prince_philip la chong cua Queen Elizabeth II dung khong ?
+2.prince_philip la chong cua Queen Elizabeth II dung khong 
+False
+3.prince_philip la chong cua Queen Elizabeth II dung khong 
 False

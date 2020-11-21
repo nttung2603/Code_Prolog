@@ -1,48 +1,48 @@
-Ai la chong cua Queen Elizabeth II ?
+Ai la chong cua Queen Elizabeth II 
 husband(prince_philip,queen_elizabeth_II)
-Ai la chong cua Prince Diana ?
+Ai la chong cua Prince Diana 
 husband(prince_charles,princess_diana)
-Ai la vo cua Prince Philip?
+Ai la vo cua Prince Philip
 wife(queen_elizabeth_II,prince_philip)
-Ai la vo cua Prince Harry?
+Ai la vo cua Prince Harry
 wife(meghan_markle,prince_harry)
-Ai la cha cua Prince Charles?
+Ai la cha cua Prince Charles
 father(prince_philip,prince_charles)
-Ai la cha cua Prince Andrew?
+Ai la cha cua Prince Andrew
 father(prince_philip,prince_andrew)
-Ai la me cua Prince Charles?
+Ai la me cua Prince Charles
 mother(queen_elizabeth_II,prince_charles)
-Ai la me cua Prince Andrew?
+Ai la me cua Prince Andrew
 mother(queen_elizabeth_II,prince_andrew)
-Ai la con cua Prince Phillip?
+Ai la con cua Prince Phillip
 child(prince_charles,prince_philip)
 child(prince_andrew,prince_philip)
 child(princess_anne,prince_philip)
 child(prince_edward,prince_philip)
-Ai la con cua Prince Charles?
+Ai la con cua Prince Charles
 child(prince_william,prince_charles)
 child(prince_harry,prince_charles)
-Ai la con trai cua Princess Diana?
+Ai la con trai cua Princess Diana
 son(prince_william,princess_diana)
 son(prince_harry,princess_diana)
-Ai la con trai cua Prince William?
+Ai la con trai cua Prince William
 son(prince_george,prince_william)
 son(prince_louis,prince_william)
-Ai la con gai cua Princess Edward?
+Ai la con gai cua Princess Edward
 daughter(lady_loulse,prince_edward)
-Ai la con gai cua Prince Phillip?
+Ai la con gai cua Prince Phillip
 daughter(princess_anne,prince_philip)
-Ai la ong ba cua Princess Eugenie?
+Ai la ong ba cua Princess Eugenie
 grandparent(prince_philip,princess_eugenie)
 grandparent(queen_elizabeth_II,princess_eugenie)
-Ai la ong ba cua Princess Beatrice?
+Ai la ong ba cua Princess Beatrice
 grandparent(prince_philip,princess_beatrice)
 grandparent(queen_elizabeth_II,princess_beatrice)
-Ai la ong ba ngoai cua Archie Harrison?
+Ai la ong ba ngoai cua Archie Harrison
 grandmother(princess_diana,archie_harrison)
-Ai la ong ba ngoai cua Prince Louis?
+Ai la ong ba ngoai cua Prince Louis
 grandmother(queen_elizabeth_II,lady_loulse)
-Ai la ong ba noi cua Archie Harrison?
+Ai la ong ba noi cua Archie Harrison
 False
-Ai la ong ba noi cua Prince Louis?
+Ai la ong ba noi cua Prince Louis
 grandfather(prince_philip,lady_loulse)

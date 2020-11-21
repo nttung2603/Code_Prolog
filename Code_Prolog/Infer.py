@@ -1,5 +1,6 @@
-from Relation import Relation
 import itertools
+from Relation import Relation
+from utils import *
 
 class Infer:
     #Prolog
@@ -7,35 +8,13 @@ class Infer:
     #left -> right
     def __init__(self,s):
         s=s.split(':-')
-        left=s[1].split(';')
+        left=s[1].split('&')
         right=s[0]
         self.left=[]
         self.right=Relation(right)
         for i in left:
             temp = Relation(i)
             self.left.append(temp)
-
-    def hash(self,x):
-        temp=[]
-        n=len(x)
-        for i in range(0,n):
-            temp.append(i)
-        i=n-1
-        while(i>=0):
-            j=i
-            while(j>=0):
-                if(x[j]==x[i]):
-                    temp[i]=j
-                j=j-1
-            i=i-1
-        return temp 
-
-    def check(self,x,y):
-        #Ta se chuyen x ve dang so de de so sanh
-        #VD: [A,B,A] -> [0,1,0]
-        if self.hash(x) == self.hash(y):
-            return True
-        return False
         
     def generate(self,KB):
         #Chua cac gia tri của cac bien ben trai co the thay the vao trong infer
@@ -59,7 +38,7 @@ class Infer:
             for i in x:
                 temp2 = temp2 + i
             #Xet xem bo x co phu hop voi temp1 hay khong?
-            if self.check(temp2, temp1):
+            if check(temp2, temp1):
                 data = []
                 temp3 =  self.right.getDatas()
                 for j in temp3:
@@ -77,6 +56,6 @@ class Infer:
         right = []
         for i in self.left:
             left.append(i.toString())
-        string_left = '^'.join(left)
+        string_left = '&'.join(left)
         string_right = self.right.toString()
         return string_left+" -> "+string_right

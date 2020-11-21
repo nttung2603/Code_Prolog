@@ -1,6 +1,8 @@
 from Relation import Relation
 from Infer import Infer
-from utils import split_string
+from utils import *
+import itertools
+
 class Main:
     def __init__(self,KB,I):
         self.KB=KB
@@ -19,32 +21,85 @@ class Main:
                 break
         
     def writeAnswer(self,questions):
-        # ^: and
-        # v: or
+        # &: and
+        # |: or
         # ~: not
-        f=open('result_query.txt','w')
+        f=open('result_query4.txt','w')
+        ordinal_number = 0
         for i in questions:
-            temp=i.split('-')
+            ordinal_number+=1
+            temp=i.split('?-')
+            f.write(str(ordinal_number))
+            f.write('.')
             f.write(temp[0])
             f.write('\n')
-            if 'X' in temp[1]:
-                temp1=Relation(temp[1])
-                for j in self.KB:
-                    if temp1.getName()==j.getName():
-                        k =0
-                        n = len(temp1.getDatas())
-                        count =0
-                        while k < n:
-                            if temp1.getData(k) == j.getData(k):
-                                count+=1
-                            k+=1
-                        if count == n-1:
-                            f.write(j.toString())
+            temp1 = temp[1].split('?')
+            q = temp1[-1]
+            if len(temp[1:])>1:
+                var = temp1[0:-1]
+                temp2=temp1[-1].split('&')
+                #Luu ket qua cua tung vi tu
+                res_temp=[]
+                #Luu cac bien
+                temp4 = []
+                for k in temp2:
+                    check_result1 = True
+                    temp3=Relation(k)
+                    for x in temp3.getDatas():
+                        temp4.append(x)
+                    #Luu ket qua cua 1 vi tu
+                    res_temp1=[]
+                    for j in self.KB:
+                        if temp3.getName() == j.getName():
+                            index =0
+                            n = len(temp3.getDatas())
+                            while index < n:
+                                if temp3.getData(index) in var:
+                                    index+=1
+                                    continue
+                                elif temp3.getData(index) == j.getData(index):
+                                    index+=1
+                                else:
+                                    break
+                            if index == n:
+                                res_temp1.append(j.getDatas())
+                    if len(res_temp1) ==0:
+                        check_result1 = False
+                        break
+                    else:
+                        res_temp.append(res_temp1)
+                if check_result1 == False:
+                     f.write("No result!!!")
+                     f.write('\n')
+                else:
+                    if len(res_temp) >1:
+                        check_result2 = False
+                        for x in itertools.product(*res_temp):
+                            temp5= []
+                            for y in x:
+                                temp5.extend(y)
+                            if check(temp5,temp4):
+                                check_result2 = True
+                                for res_var in var:
+                                    index = temp4.index(res_var) 
+                                    f.write(res_var +' = ' + temp5[index])
+                                    f.write('\t')
+                                f.write('\n')
+                        if check_result2 == False:
+                            f.write("No result!!!")
                             f.write('\n')
+                    else:
+                        for x in res_temp[0]:
+                            if check(x,temp4):
+                                for res_var in var:
+                                    index = temp4.index(res_var)                
+                                    f.write(res_var +' = ' + x[index])
+                                    f.write('\t')
+                                f.write('\n')
             else:
-                s = split_string(temp[1])
+                s = split_string(q)
                 for i in range(len(s)):
-                    if s[i] != '^' and s[i] != 'v' and s[i] != '[' and s[i] != ']':
+                    if s[i] != '&' and s[i] != '|' and s[i] != '[' and s[i] != ']':
                         temp1 = Relation(s[i])
                         res_temp = False
                         for j in self.KB:
@@ -63,10 +118,6 @@ class Main:
                             s[i]='1'
                         else:
                             s[i]='0'
-                    elif s[i] == '^':
-                        s[i]='&'
-                    elif s[i] == 'v':
-                        s[i] = '|'
                 res = eval(''.join(s))
                 res_write = ''
                 if res == 1:
@@ -82,15 +133,13 @@ class Main:
     def printKB(self):
         f=open('test1.txt','w')
         for i in self.KB:
-            f.write(i.getName())
-            f.write(",")
-            listToStr = ' '.join(map(str, i.getDatas()))
-            f.write(listToStr)
+            f.write(i.toString())
             f.write('\n')
 
 #Doc file input
 #fp=input('Nhập tên  file input: ')            
-f=open('hoang_gia_anh.txt','r')
+#f=open('hoang_gia_anh.txt','r')
+f=open('test1.txt','r')
 f1=f.read().splitlines()
 KB=[]
 I=[]
@@ -109,7 +158,7 @@ f.close()
 
 #Doc file query
 questions=[]
-f=open('query.txt','r')
+f=open('query3.txt','r')
 f2=f.read().splitlines()
 for x in f2:
     questions.append(x)

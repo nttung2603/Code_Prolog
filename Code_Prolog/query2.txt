@@ -1,3 +1,0 @@
-prince_philip la chong cua Queen Elizabeth II dung khong ?-husband(prince_philip,queen_elizabeth_II)
-prince_philip la chong cua Queen Elizabeth II dung khong ?-husband(Ana,queen_elizabeth_II)|husband(prince_philip,queen_elizabeth_II)
-prince_philip la chong cua Queen Elizabeth II dung khong ?-husband(Ana,queen_elizabeth_II)|(husband(prince_philip,queen_elizabeth_II)&husband(prince_charles,princess_diana))

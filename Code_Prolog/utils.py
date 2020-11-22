@@ -42,22 +42,3 @@ def check(x,y):
     if my_hash(x) == my_hash(y):
         return True
     return False
-
-def delete_duplicate(data, row_count, col_count):
-    i=0
-    while i < row_count:
-        k = i+1
-        while k < row_count:
-            j = 0
-            while j < col_count:
-                if data[i][j] != data[k][j]:
-                    break
-                else:
-                    j+=1
-            if j == col_count:
-                del data[k]
-                k -=1
-                row_count -=1
-            k+=1
-        i+=1
-    return row_count

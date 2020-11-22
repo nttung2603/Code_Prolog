@@ -1,6 +1,0 @@
-1.prince_philip la chong cua Queen Elizabeth II dung khong 
-True
-2.prince_philip la chong cua Queen Elizabeth II dung khong 
-False
-3.prince_philip la chong cua Queen Elizabeth II dung khong 
-False

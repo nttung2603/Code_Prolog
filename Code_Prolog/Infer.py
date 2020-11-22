@@ -1,6 +1,6 @@
 import itertools
 from Relation import Relation
-from utils import *
+from Utils import *
 
 class Infer:
     #Prolog
@@ -51,11 +51,3 @@ class Infer:
                     continue
                 return temp4
         return False
-    def toString(self):
-        left=[]
-        right = []
-        for i in self.left:
-            left.append(i.toString())
-        string_left = '&'.join(left)
-        string_right = self.right.toString()
-        return string_left+" -> "+string_right

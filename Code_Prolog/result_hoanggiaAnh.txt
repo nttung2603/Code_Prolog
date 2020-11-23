@@ -1,0 +1,98 @@
+1.
+?-X?married(X,Prince Charles)
+X = Camilla Parker Bowles	
+2.
+?-sibling(Prince Andrew,Princess Anne)
+True
+3.
+?-uncle(TimothyLaurence,ZaraPhillips)
+False
+4.
+?-niece(Prince Eugenie,Prince Edward)
+False
+5.
+?-aunt(Princess Diana,Isla Phillips)
+False
+6.
+?-nephew(Prince George,Prince Harry)
+True
+7.
+?-sister(Princess Beatrice,Princess Eugenie)
+True
+8.
+?-grandfather(Prince Phillip,Prince George)
+False
+9.
+?-X?female(X)
+X = Queen Elizabeth II	
+X = Diana	
+X = Camilla Parker Bowles	
+X = Princess Anne	
+X = Sarah Ferguson	
+X = SophieRhys-jones	
+X = Kate Middleton	
+X = Autumn Kelly	
+X = Zara Phillips	
+X = Princess Eugenie	
+X = Princess Beatrice	
+X = Lady Louise Windsor	
+X = Savannah Phillips	
+X = Princess Charlotte	
+X = Isla Phillips	
+X = MiaGrace Tindall	
+10.
+?-X?male(X)
+X = Prince Philip	
+X = Prince Charles	
+X = Mark Phillips	
+X = Timothy Laurence	
+X = Prince Andrew	
+X = Prince Edward	
+X = Prince William	
+X = Prince Harry	
+X = Peter Phillips	
+X = Mike Tindall	
+X = James	
+X = Prince George	
+11.
+?-X?parent(X,Zara Phillips)
+X = Mark Phillips	
+X = Princess Anne	
+12.
+?-divorced(SophieRhys-jones,Prince Edward)
+False
+13.
+?-uncle(Prince Edward,Mike Tindall)
+False
+14.
+?-X?grandchild(X,Prince Phillip)
+X = Prince William	
+X = Prince Harry	
+X = Princess Eugenie	
+X = Princess Beatrice	
+X = Peter Phillips	
+X = Zara Phillips	
+X = Lady Louise Windsor	
+X = James	
+15.
+?-nephew(Prince Phillip,Prince William)
+False
+16.
+?-daughter(Prince William,Princess Charlotte)
+False
+17.
+?-X?child(X,Princess Diana)
+X = Prince William	
+X = Prince Harry	
+18.
+?-X?mother(X,James)
+X = SophieRhys-jones	
+19.
+?-X?father(X,MiaGrace Tindall)
+X = Mike Tindall	
+20.
+?-X?parent(Queen Elizabeth II,X)
+X = Prince Charles	
+X = Prince Andrew	
+X = Princess Anne	
+X = Prince Edward	

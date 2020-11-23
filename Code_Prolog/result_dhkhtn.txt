@@ -1,0 +1,73 @@
+1.
+?-sv_thuoc_khoa(Nguyen Thanh Tung,CNTT)
+True
+2.
+?-sv_thuoc_truong(Pham Tan,DHKHTN)
+True
+3.
+?-gv_phu_trach(Pham Van G,Duong Doan Bao Son)
+False
+4.
+?-X?ban_cung_gioi(X,Bui Van Vi)
+X = Duong Doan Bao Son	
+X = Pham Tan	
+5.
+?-X?ban_khac_gioi(X,Dao Thi Hoa)
+No result!!!
+6.
+?-ban_chung(Nguyen Thanh Tung,Dao Thi Hoa)
+True
+7.
+?-X?cac_mon_phai_hoc(Tran Thi Trang,X)
+X = Xac Suat Thong Ke	
+8.
+?-sv_chung_khoa(Pham Tan,Nguyen Thanh Tung)
+True
+9.
+?-X?nu(X)
+X = Dao Thi Hoa	
+X = Nguyen Ngoc Anh	
+X = Tran Thi Trang	
+X = Tran Thi C	
+X = Dao Thi D	
+X = Nguyen Thi E	
+10.
+?-X?nam(X)
+X = Nguyen Thanh Tung	
+X = Duong Doan Bao Son	
+X = Pham Tan	
+X = Bui Van Vi	
+X = Nguyen Van A	
+X = Le Van B	
+X = Huynh Van F	
+X = Pham Van G	
+11.
+?-X?gv_thuoc_truong(Le Van B,X)
+X = DHKHTN	
+12.
+?-T?namsinh(Tran Thi C,T)
+T = 1977	
+13.
+?-cung_tuoi(Dao Thi Hoa,Nguyen Ngoc Anh)
+False
+14.
+?-khac_tuoi(Nguyen Van A,Pham Van G)
+True
+15.
+?-cung_que(Dao Thi Hoa,Tran Thi C)
+True
+16.
+?-mon_chung_khoa(Hoc May,Lap Trinh Web)
+True
+17.
+?-X?quequan(Duong Doan Bao Son,X)
+X = Quang Nam	
+18.
+?-X?giangvien(Huynh Van F,X)
+X = Toan Ung Dung	
+19.
+?-X?sinhvien(Tran Thi Trang,X)
+X = Toan Thong Ke	
+20.
+?-X?monhoc(Xac Suat Thong Ke,X)
+X = Toan Thong Ke	

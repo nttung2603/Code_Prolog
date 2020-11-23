@@ -4,7 +4,7 @@ def split_string(expression):
     list = []
     while end < len(expression):
         #Kiem tra ki tu do phai la toan tu khong
-        if expression[end] =='^' or expression[end] =='v':
+        if expression[end] =='&' or expression[end] =='|':
             list.append(expression[start:end])
             list.append(expression[end:end+1])
             start = end+1

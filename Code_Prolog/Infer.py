@@ -51,3 +51,9 @@ class Infer:
                     continue
                 return temp4
         return False
+    def tostring(self):
+        string_left = []
+        for i in self.left:
+            string_left.append(i.toString())
+        string_left = ' ^ '.join(string_left)
+        return string_left + ' -> ' + self.right.toString()

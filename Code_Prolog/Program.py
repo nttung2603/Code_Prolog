@@ -32,10 +32,13 @@ class Program:
             temp=i.split('?-')
             f.write(str(ordinal_number))
             f.write('.')
-            f.write(temp[0])
+            # f.write(temp[0])
             f.write('\n')
             temp1 = temp[1].split('?')
             q = temp1[-1]
+            f.write('?-')
+            f.write(''.join(temp[1]))
+            f.write('\n')
             if len(temp1)>1:
                 var = temp1[0:-1]
                 temp2=temp1[-1].split('&')
